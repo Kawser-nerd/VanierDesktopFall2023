@@ -1,0 +1,8 @@
+C:\Users\kawser\source\repos\Week2cls1\bin\Debug\Week2cls1.exe.config
+C:\Users\kawser\source\repos\Week2cls1\bin\Debug\Week2cls1.exe
+C:\Users\kawser\source\repos\Week2cls1\bin\Debug\Week2cls1.pdb
+C:\Users\kawser\source\repos\Week2cls1\obj\Debug\Week2cls1.csproj.AssemblyReference.cache
+C:\Users\kawser\source\repos\Week2cls1\obj\Debug\Week2cls1.csproj.SuggestedBindingRedirects.cache
+C:\Users\kawser\source\repos\Week2cls1\obj\Debug\Week2cls1.csproj.CoreCompileInputs.cache
+C:\Users\kawser\source\repos\Week2cls1\obj\Debug\Week2cls1.exe
+C:\Users\kawser\source\repos\Week2cls1\obj\Debug\Week2cls1.pdb
