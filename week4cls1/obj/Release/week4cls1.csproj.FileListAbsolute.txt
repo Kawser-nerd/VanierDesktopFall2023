@@ -1,0 +1,16 @@
+C:\Users\kawser\source\repos\week4cls1\bin\Release\week4cls1.exe.config
+C:\Users\kawser\source\repos\week4cls1\bin\Release\week4cls1.exe
+C:\Users\kawser\source\repos\week4cls1\bin\Release\week4cls1.pdb
+C:\Users\kawser\source\repos\week4cls1\obj\Release\week4cls1.csproj.AssemblyReference.cache
+C:\Users\kawser\source\repos\week4cls1\obj\Release\week4cls1.csproj.SuggestedBindingRedirects.cache
+C:\Users\kawser\source\repos\week4cls1\obj\Release\MainWindow.g.cs
+C:\Users\kawser\source\repos\week4cls1\obj\Release\App.g.cs
+C:\Users\kawser\source\repos\week4cls1\obj\Release\week4cls1_MarkupCompile.cache
+C:\Users\kawser\source\repos\week4cls1\obj\Release\week4cls1_MarkupCompile.lref
+C:\Users\kawser\source\repos\week4cls1\obj\Release\MainWindow.baml
+C:\Users\kawser\source\repos\week4cls1\obj\Release\week4cls1.g.resources
+C:\Users\kawser\source\repos\week4cls1\obj\Release\week4cls1.Properties.Resources.resources
+C:\Users\kawser\source\repos\week4cls1\obj\Release\week4cls1.csproj.GenerateResource.cache
+C:\Users\kawser\source\repos\week4cls1\obj\Release\week4cls1.csproj.CoreCompileInputs.cache
+C:\Users\kawser\source\repos\week4cls1\obj\Release\week4cls1.exe
+C:\Users\kawser\source\repos\week4cls1\obj\Release\week4cls1.pdb
