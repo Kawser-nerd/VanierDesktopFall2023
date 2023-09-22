@@ -1,0 +1,35 @@
+﻿<Window x:Class="Lab1Problem3.PopulationPrediction"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab1Problem3"
+        mc:Ignorable="d"
+        Title="PopulationPrediction" Height="450" Width="800">
+    <Grid>
+        <Label Content="Starting Polutation" HorizontalAlignment="Left" Margin="132,94,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <TextBox x:Name="populSize" HorizontalAlignment="Left" Margin="280,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" FontSize="14"/>
+        <Label Content="Increase Rate (%)" HorizontalAlignment="Left" Margin="132,136,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <TextBox x:Name="incrRate" HorizontalAlignment="Left" Margin="280,141,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" FontSize="14"/>
+        <Label Content="Number of Days" HorizontalAlignment="Left" Margin="135,188,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <ComboBox x:Name="comboBoxOne" HorizontalAlignment="Left" Margin="280,188,0,0" VerticalAlignment="Top" Width="146" FontSize="14" SelectedIndex="0">
+            <ComboBoxItem Content="1"/>
+            <ComboBoxItem Content="2"/>
+            <ComboBoxItem Content="3"/>
+            <ComboBoxItem Content="4"/>
+            <ComboBoxItem Content="5"/>
+            <ComboBoxItem Content="6"/>
+            <ComboBoxItem Content="7"/>
+            <ComboBoxItem Content="8"/>
+            <ComboBoxItem Content="9"/>
+            <ComboBoxItem Content="10"/>
+            <ComboBoxItem Content="11"/>
+            <ComboBoxItem Content="12"/>
+            <ComboBoxItem Content="13"/>
+            <ComboBoxItem Content="14"/>
+            <ComboBoxItem Content="15"/>
+        </ComboBox>
+        <Button x:Name="Polution_Growth" Content="Calculate Population" HorizontalAlignment="Left" Margin="280,262,0,0" VerticalAlignment="Top" FontSize="15" Background="#FFCFF3E3" Height="46" Width="146" Click="Polution_Growth_Click"/>
+
+    </Grid>
+</Window>
