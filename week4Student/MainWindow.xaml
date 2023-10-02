@@ -5,12 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:week4Student"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="900" WindowState="Maximized" WindowStyle="None" >
+        Title="MainWindow" Height="600" Width="900">
+    <!--  WindowState="Maximized" WindowStyle="None" -->
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="22*"/>
-            <RowDefinition Height="57*"/>
-            <RowDefinition Height="41*"/>
+            <RowDefinition Height="107*"/>
+            <RowDefinition Height="297*"/>
+            <RowDefinition Height="180*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="25*"/>
@@ -19,7 +20,7 @@
             <ColumnDefinition Width="17*"/>
         </Grid.ColumnDefinitions>
         <Label x:Name="label" Grid.Column="1" Grid.Row="0" Content="      ABC College Student Registration" HorizontalAlignment="Center" Margin="0,30,0,0" VerticalAlignment="Top" FontSize="24" Background="#FFE9FBFC" Height="55" Width="420"/>
-        <Canvas Grid.Column="1" Grid.Row="1" Background="#FFF3F6F0">
+        <Canvas Grid.Column="1" Background="#FFF3F6F0" Margin="0,107,0,0" Grid.RowSpan="2">
             <Label x:Name="label1"  Content="Student Name" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" FontSize="14"/>
             <TextBox x:Name="name" Canvas.Left="145" TextWrapping="Wrap" Canvas.Top="34" Width="185" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14"/>
             <Label x:Name="label1_Copy"  Content="Student No" FontSize="14" Canvas.Left="10" Canvas.Top="75" HorizontalAlignment="Center" VerticalAlignment="Top"/>
@@ -31,15 +32,16 @@
             <Label x:Name="label1_Copy3"  Content="Registration Year" FontSize="14" Canvas.Left="10" Canvas.Top="225" HorizontalAlignment="Center" VerticalAlignment="Top"/>
             <TextBox x:Name="year" Canvas.Left="145" TextWrapping="Wrap" Canvas.Top="229" Width="185" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         </Canvas>
-        <StackPanel Grid.Column="2" Grid.Row="1">
+        <StackPanel Grid.Column="2" Margin="0,107,0,0" Grid.RowSpan="2">
             <Button x:Name="insert" Content="Insert Student" Background="#FFC9D9F1" FontSize="16" Height="55" Click="insert_Click"/>
-            <Button x:Name="Select" Content="Select Student" Height="55" Background="#FFEEF7DE" FontSize="15"/>
-            <Button x:Name="update" Content="Update Student" Background="#FFC9D9F1" FontSize="16" Height="55"/>
-            <Button x:Name="Delete" Content="Delete Student" Height="60" Background="#FFEEF7DE" FontSize="15"/>
-            <Button x:Name="show" Content="Show All Students" Background="#FFC9D9F1" FontSize="16" Height="60"/>
+            <Button x:Name="Select" Content="Select Student" Height="55" Background="#FFEEF7DE" FontSize="15" Click="Select_Click"/>
+            <Button x:Name="update" Content="Update Student" Background="#FFC9D9F1" FontSize="16" Height="55" Click="update_Click"/>
+            <Button x:Name="Delete" Content="Delete Student" Height="60" Background="#FFEEF7DE" FontSize="15" Click="Delete_Click"/>
+            <Button x:Name="show" Content="Show All Students" Background="#FFC9D9F1" FontSize="16" Height="60" Click="show_Click"/>
         </StackPanel>
-        <TextBox x:Name="textBox" Grid.Column="2" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Margin="123,0,0,0" Height="18" Background="#FFDEDDF7" FontSize="15"/>
+        <TextBox x:Name="search" Grid.Column="2" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Margin="123,0,0,0" Height="30" Background="#FFDEDDF7" FontSize="15"/>
         <Label x:Name="label2" Grid.Column="2" Content="Search ID" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15" Height="30" Width="74" Margin="43,0,0,0"/>
+        <DataGrid x:Name="dataGrid" Grid.Column="1" Grid.Row="2" Margin="0,25,0,50" Background="#FFDBF1EE"/>
 
         <!-- In Canvas, the controls are positioned with absolute characteristics, but they mainly arrange the margin for each control
         inside the canvas layout.
