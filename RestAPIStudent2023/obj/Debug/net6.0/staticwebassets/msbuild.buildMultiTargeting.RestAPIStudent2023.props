@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\RestAPIStudent2023.props" />
+</Project>
