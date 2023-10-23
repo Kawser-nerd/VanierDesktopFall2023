@@ -56,5 +56,68 @@ namespace RestAPIStudent2023.Controllers
             // Step 5: Returning the Response to the Client or Web Browser
             return response;
         }
+
+        // Search one Student from the Database using Student ID
+
+        [HttpGet] // because we are going to generate Get request to the database
+        [Route("GetStudentbyId/{id}")]
+        public Response GetStudentbyId(int id) { 
+            // Step 1: Creating the instance of the Response Class
+            Response response = new Response();
+            // Step 2: Create the Connection for the Database
+            NpgsqlConnection con =
+                new NpgsqlConnection(_configuration.GetConnectionString("studentConnection"));
+            // Step 3: Creating the query with the Id passed to the system as well as
+            // connect to the database and execute the query
+            DBApplication dbA = new DBApplication();
+            // Step 4: Call the method which is going to search the student by id
+            response = dbA.GetStudentbyId(con, id);
+            // step 5: Return the Response 
+            return response;
+        }
+
+        // insert a new student
+        [HttpPost] // to update/send something from client machine to the remote machine/server
+        [Route("AddStudent")]
+        public Response AddStudent(Student student) // we are passing full student information
+            // from local client machine to the remote machine/server
+        {
+            // step 1: Create Response Instance
+            Response response = new Response();
+            // Step 2: Create the Connection
+            NpgsqlConnection con =
+                new NpgsqlConnection(_configuration.GetConnectionString("studentConnection"));
+            // Step 3: Generate the Query and pass it to the Method
+            DBApplication dbA = new DBApplication();
+            // step 4: Call the Method
+            response = dbA.AddStudent(con, student);
+            return response;
+        }
+
+        // update the student information
+        [HttpPut] // to update any information in server, we either use put or post request
+        [Route("UpdateStudent")]
+        public Response UpdateStudent(Student student) // to update the attributes of the student itself
+        {
+            Response response = new Response();
+            NpgsqlConnection con =
+                new NpgsqlConnection(_configuration.GetConnectionString("studentConnection"));
+            DBApplication dbA = new DBApplication();
+            response = dbA.UpdateStudent(con, student);
+            return response;
+        }
+
+        // Delete the student information
+        [HttpDelete]
+        [Route("DeleteStudentbyId/{id}")]
+        public Response DeleteStudentbyId(int id) 
+        {
+            Response response = new Response();
+            NpgsqlConnection con =
+                new NpgsqlConnection(_configuration.GetConnectionString("studentConnection"));
+            DBApplication dbA = new DBApplication();
+            response = dbA.DeleteStudentbyId(con, id);
+            return response;
+        }
     }
 }
