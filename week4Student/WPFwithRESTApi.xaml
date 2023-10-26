@@ -32,10 +32,10 @@
             <TextBox x:Name="year" Canvas.Left="145" TextWrapping="Wrap" Canvas.Top="229" Width="185" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         </Canvas>
         <StackPanel Grid.Column="2" Margin="0,107,0,0" Grid.RowSpan="2">
-            <Button x:Name="insert" Content="Insert Student" Background="#FFC9D9F1" FontSize="16" Height="55" />
+            <Button x:Name="insert" Content="Insert Student" Background="#FFC9D9F1" FontSize="16" Height="55" Click="insert_Click" />
             <Button x:Name="Select" Content="Select Student" Height="55" Background="#FFEEF7DE" FontSize="15" Click="Select_Click" />
-            <Button x:Name="update" Content="Update Student" Background="#FFC9D9F1" FontSize="16" Height="55" />
-            <Button x:Name="Delete" Content="Delete Student" Height="60" Background="#FFEEF7DE" FontSize="15" />
+            <Button x:Name="update" Content="Update Student" Background="#FFC9D9F1" FontSize="16" Height="55" Click="update_Click" />
+            <Button x:Name="Delete" Content="Delete Student" Height="60" Background="#FFEEF7DE" FontSize="15" Click="Delete_Click" />
             <Button x:Name="show" Content="Show All Students" Background="#FFC9D9F1" FontSize="16" Height="60" Click="show_Click"/>
         </StackPanel>
         <TextBox x:Name="search" Grid.Column="2" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Margin="123,0,0,0" Height="30" Background="#FFDEDDF7" FontSize="15"/>

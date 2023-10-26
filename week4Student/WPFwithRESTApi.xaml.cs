@@ -75,5 +75,58 @@ namespace week4Student
             year.Text = response_JSON.student.std_reg_year.ToString();
 
         }
+
+        private async void insert_Click(object sender, RoutedEventArgs e)
+        {
+            // step 1: create an instance of the Student
+            Student student = new Student();
+
+            student.std_name = name.Text;
+            student.std_email = email.Text;
+            student.std_dept = dept.Text;
+            student.std_reg_year = int.Parse(year.Text);
+
+            // step 2: create the instance of the Response class 
+            // and send the student using rest api to the remote database 
+            // server
+
+            // we are generating a Post request of the data to
+            // database server
+            var server_response =
+                await client.PostAsJsonAsync("AddStudent", student);
+
+            // step 3: Get the response and extract it
+            //Response response_JSON = 
+            //    JsonConvert.DeserializeObject<Response>
+             //   (server_response.ToString());
+            MessageBox.Show(server_response.ToString());
+        }
+
+        private async void update_Click(object sender, RoutedEventArgs e)
+        {
+            Student student = new Student();
+            student.std_name = name.Text;
+            student.std_email = email.Text;
+            student.std_dept = dept.Text;
+            student.std_reg_year = int.Parse(year.Text);
+            student.std_id = int.Parse(stdid.Text);
+
+            var server_response =
+                await client.PutAsJsonAsync("UpdateStudent", student);
+            MessageBox.Show(server_response.ToString());
+        }
+
+        private async void Delete_Click(object sender, RoutedEventArgs e)
+        {
+            var response_JSON =
+                await client.DeleteAsync("DeleteStudentbyId/" 
+                + int.Parse(search.Text));
+
+            MessageBox.Show(response_JSON.StatusCode.ToString());
+            MessageBox.Show(response_JSON.RequestMessage.ToString());
+
+
+
+        }
     }
 }
